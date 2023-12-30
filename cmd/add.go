@@ -69,7 +69,7 @@ Example: cobra-cli add server -> resulting in a new cmd/server.go`,
 
 			cobra.CheckErr(command.Create())
 
-			fmt.Printf("%s created at %s\n", command.CmdName, command.AbsolutePath)
+			fmt.Printf("%s_%s created at %s\n", command.CmdParent, command.CmdName, command.AbsolutePath)
 		},
 	}
 )
