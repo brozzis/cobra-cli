@@ -85,7 +85,7 @@ func (p *Project) createLicenseFile() error {
 func (c *Command) Create() error {
 
 	var s string
-	if c.CmdParent == "" {
+	if c.CmdParent == "rootCmd" {
 		s = fmt.Sprintf("%s/cmd/%s.go", c.AbsolutePath, c.CmdName)
 	} else {
 		s = fmt.Sprintf("%s/cmd/%s_%s.go", c.AbsolutePath, c.CmdParent, c.CmdName)
